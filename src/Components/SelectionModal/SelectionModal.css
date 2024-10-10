@@ -1,0 +1,229 @@
+.selection-card {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: fit-content;
+    padding: 30px;
+    width: 50%;
+}
+
+.selection-card>img {
+    align-self: flex-end;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+}
+
+.selection-card>p {
+    color: hsl(0, 0%, 48%);
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+input {
+    -webkit-appearance: none;
+}
+
+/* Choices */
+
+.selected-card {
+    align-self: flex-start;
+    border-radius: 6px;
+    border: 1px solid hsla(0, 0%, 48%, 0.4);
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.checked {
+    border: 2px solid hsl(176, 50%, 47%);
+}
+
+.selected-card .selected {
+    align-items: flex-start;
+    display: flex;
+    gap: 20px;
+    height: fit-content;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+}
+
+.border-bottom {
+    border-bottom: 1px solid hsla(0, 0%, 48%, 0.4);
+}
+
+.selected-card .selected .sel-input input {
+    border-radius: 50%;
+    border: 1px solid hsla(0, 0%, 48%, 0.4);
+    cursor: pointer;
+    height: 26px;
+    padding: 10px;
+    width: 26px;
+}
+
+.selected-card:not(.card-mahogany) .selected .sel-input input:checked {
+    background: radial-gradient(circle, rgba(20, 123, 116, 1) 38%, rgba(255, 255, 255, 0) 42%);
+}
+
+.selected-card .selected .selection-text {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 100%;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.selected-card .selected .selection-text:not(.card-mahogany) h4 {
+    cursor: pointer;
+}
+
+.selected-card .selected .selection-text:not(.card-mahogany) h4:hover {
+    color: hsl(176, 50%, 47%);
+}
+
+.selected-card .selected .selection-text>p {
+    color: hsl(0, 0%, 48%);
+}
+
+.selected-card:not(.no-reward) .selected .selection-text .selection-heading {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.selected-card:not(.no-reward) .selected .selection-text .selection-heading>p {
+    align-items: center;
+    display: flex;
+    font-size: 0.8rem;
+    gap: 6px;
+    justify-content: center;
+}
+
+.selected-card:not(.no-reward) .selected .selection-text .selection-heading>p span {
+    color: hsl(0, 0%, 0%);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.selected-card:not(.no-reward) .selected .selection-text .selection-heading .selection-left {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.selected-card:not(.no-reward) .selected .selection-text .selection-heading .selection-left p {
+    color: hsl(176, 50%, 47%);
+    font-weight: 700;
+}
+
+.selected-card .pledge {
+    align-items: center;
+    display: none;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.no-reward .pledge {
+    justify-content: flex-end;
+}
+
+.selected-card:not(.no-reward) .pledge>p {
+    color: hsl(0, 0%, 48%);
+}
+
+.selected-card:not(.no-reward) .pledge .form {
+    align-items: center;
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+}
+
+.selected-card:not(.no-reward) .pledge .form label {
+    align-items: center;
+    border-radius: 50px;
+    border: 1px solid hsla(0, 0%, 48%, 0.4);
+    color: hsla(0, 0%, 48%, 0.4);
+    display: flex;
+    gap: 6px;
+    height: 50px;
+    justify-content: space-between;
+    padding: 0 25px;
+    width: fit-content;
+}
+
+.selected-card:not(.no-reward) .pledge .form label input {
+    border: none;
+    font-family: Commissioner, sans-serif;
+    font-weight: 700;
+    outline: none;
+    padding: 5px 0;
+    width: 40px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.selected-card .pledge button {
+    background: hsl(176, 50%, 47%);
+    border-radius: 50px;
+    border: none;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    font-family: Commissioner, sans-serif;
+    font-weight: 500;
+    height: 50px;
+    padding: 0 25px;
+}
+
+.selected-card .pledge button:hover {
+    background: hsl(176, 72%, 28%);
+}
+
+.card-mahogany {
+    opacity: 0.5;
+}
+
+.card-mahogany .selected .sel-input input {
+    cursor: default !important;
+}
+
+.card-mahogany .pledge button {
+    cursor: default;
+}
+
+@media (max-width: 800px) {
+    .selection-card {
+        width: 90%;
+    }
+
+    .selected-card:not(.no-reward) .selected .selection-text .selection-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .selected-card:not(.no-reward) .selected .selection-text .selection-heading .selection-left {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .selected-card .pledge {
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+}

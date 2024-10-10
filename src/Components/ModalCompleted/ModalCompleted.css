@@ -1,0 +1,47 @@
+.card-completed {
+    align-items: center;
+    background: hsl(0, 0%, 100%);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: fit-content;
+    justify-content: space-between;
+    padding: 50px;
+    text-align: center;
+    width: 40%;
+}
+
+.card-completed img {
+    height: 80px;
+    margin-bottom: 20px;
+    width: 80px;
+}
+
+.card-completed h5 {
+    font-size: 1.6rem;
+}
+
+.card-completed p {
+    color: hsl(0, 0%, 48%);
+    line-height: 2rem;
+}
+
+.card-completed button {
+    background: hsl(176, 50%, 47%);
+    border-radius: 50px;
+    border: none;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    font-family: Commissioner, sans-serif;
+    font-weight: 500;
+    height: 45px;
+    padding: 0 30px;
+}
+
+@media (max-width: 800px) {
+    .card-completed {
+        padding: 40px 20px;
+        width: 90%;
+    }
+}
